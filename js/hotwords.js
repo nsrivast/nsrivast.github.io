@@ -20,9 +20,10 @@ $(document).ready(function () {
     }
   );
 
-  $(".section-arrow").on("click", function (event) {
+  // Replace individual section arrows with a single main toggle
+  $("#main-toggle").on("click", function (event) {
     $(this).find("img").toggleClass("rotate");
     $(this).find("img").toggleClass("rotate-reset");
-    $(this).next(".detail").toggleClass("show");
+    $(".detail").toggleClass("show");
   });
 });
